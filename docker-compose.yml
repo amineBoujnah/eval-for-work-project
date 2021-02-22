@@ -13,22 +13,6 @@ services:
         volumes:
             - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
             - ./wordpress:/var/www/html
-#        logging:
-#            driver: gelf
-#            options:
-#                gelf-address: "udp://127.0.0.1:12201"
-
- #   graylog:
- #     ports:
- #       - 9000:9000/tcp
- #       - 9001:9001/tcp
- #       - 12201:12201/udp
- #     image: edyan/graylog:latest
- #     logging:
- #       driver: gelf
- #       options:
- #         gelf-address: "udp://127.0.0.1:12201"
-
     nginx:
         image: nginx:latest
         restart: unless-stopped
